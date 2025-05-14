@@ -176,6 +176,8 @@
 
 #     print(f"Grand Total :                                       {item["total"]}")
 
+
+invoice=open("data.txt","a")
 name = input("Enter your name: ")
 print("Chose a laptop")
 print("DEll,(Rs50000)")
@@ -240,18 +242,18 @@ total = laptops_cost*quantity+delivery_cost+packing_cost
 VAT = 13/100*total
 Grand_Total = total+VAT
 
-print("==================================WELCOME TO ABC ELECTRONICS SHOWROOM=============================")
-print("............................................BILL...................................................")
-print(f"Customer's Name: {name}")
-print(f"Purchased Product: {PRODUCT}")
-print(f"Price per unit: {laptops[PRODUCT]}")
-print(f"Purchased Quantity: {quantity}")
-print(f"Delivery: {delivery_name}")
-print(f"Delivery Cost: {delivery_cost}")
-print(f"Packing: {packing_name}")
-print(f"Packing cost: {packing_cost}")
-print(f"Location : {location}")
-print(f"Total : {total}")
-print(f"VAT: {VAT}")
-print(f"Grand Total: {Grand_Total}")
-print("                                  Thanks For Visiting                            ")  
+invoice.write(str(print("==================================WELCOME TO ABC ELECTRONICS SHOWROOM=============================")))
+invoice.write(str(print("............................................BILL...................................................")))
+invoice.write(str(print(f"Customer's Name: {name}")))
+invoice.write(str(print(f"Purchased Product: {PRODUCT}")))
+invoice.write(str(print(f"Price per unit: {laptops[PRODUCT]}")))
+invoice.write(str(print(f"Purchased Quantity: {quantity}")))
+invoice.write(str(print(f"Delivery: {delivery_name}")))
+invoice.write(str(print(f"Delivery Cost: {delivery_cost}")))
+invoice.write(str(print(f"Packing: {packing_name}")))
+invoice.write(str(print(f"Packing cost: {packing_cost}")))
+invoice.write(str(print(f"Location : {location}")))
+invoice.write(str(print(f"Total : {total}")))
+invoice.write(str(print(f"VAT: {VAT}")))
+invoice.write(str(print(f"Grand Total: {Grand_Total}")))
+invoice.write(str(print("                                  Thanks For Visiting                            ") ))
