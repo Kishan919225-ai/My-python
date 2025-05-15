@@ -1,0 +1,14 @@
+
+Name:john
+,Purchased product:DELL,
+Price per unit: 50000,
+Purchased Quantity: 3,/nDelivery: Home,
+Delivery Cost: 1000,
+Packing: BoxPacking cost: 1000,
+Location : KATHMANDU,
+Total : 152000,
+VAT: 19760.0,
+Grand Total: 171760.0
+1,1118.0,223.60,A+ 
+2,423.0,84.60,A 
+1,423.0,84.60,A 
