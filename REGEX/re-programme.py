@@ -21,4 +21,4 @@ pattern3="^[a-zA-z1-9]+$"
 if re.match(pattern3,address):
     print(f"ADDRESS:{address}")
 
-# class,object,constructor,inheritenace,scope,,setter and getter
+# what is class,object,constructor,inheritenace,scope,,setter and getter?
