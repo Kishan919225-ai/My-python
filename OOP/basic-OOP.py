@@ -34,3 +34,8 @@
 # employee.fullname(emp_1)
 # We have to pass the instance (emp_1) manually if we do it like this
 
+# decorators 
+#__add__
+
+
+

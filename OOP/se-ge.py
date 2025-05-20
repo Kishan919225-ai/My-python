@@ -24,3 +24,10 @@
 
 # print("Name:",p1.get_name())
 # print("Age:",p1.get_age())
+
+# _=protected
+# __=private
+# Nothing=public
+
+
+
