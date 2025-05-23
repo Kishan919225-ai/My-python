@@ -109,59 +109,78 @@
 
 # root.mainloop()
 
-import tkinter as tk
+# import tkinter as tk
 
-root=tk.Tk()
-root.geometry("350x400")
-root.resizable(True,True)
-root.title("Calculator")
+# root=tk.Tk()
+# root.geometry("350x400")
+# root.resizable(True,True)
+# root.title("Calculator")
 
-expression=""
-entry_text=tk.StringVar()
+# expression=""
+# entry_text=tk.StringVar()
 
-entry=tk.Entry(root,textvariable=entry_text,font=("Arial",24),width=18,justify="right")
-entry.grid(row=0,column=0,columnspan=5,padx=15,pady=30)
+# entry=tk.Entry(root,textvariable=entry_text,font=("Arial",24),width=18,justify="right")
+# entry.grid(row=0,column=0,columnspan=5,padx=15,pady=30)
 
 
-def button_click(char):
-    global expression
-    expression+=str(char)
-    entry_text.set(expression)
+# def button_click(char):
+#     global expression
+#     expression+=str(char)
+#     entry_text.set(expression)
 
-def clear():
-    global expression
-    expression=""
-    entry_text.set("")
+# def clear():
+#     global expression
+#     expression=""
+#     entry_text.set("")
 
-def delete():
-    global expression
-    expression=expression[:-1]
+# def delete():
+#     global expression
+#     expression=expression[:-1]
 
-def calculate():
-    global expression
-    try:
-        result=str(eval(expression))
-        entry_text.set(result)
-        expression=result
-    except Exception as e :
-        entry_text.set("Error")
-        expression=""
+# def calculate():
+#     global expression
+#     try:
+#         result=str(eval(expression))
+#         entry_text.set(result)
+#         expression=result
+#     except Exception as e :
+#         entry_text.set("Error")
+#         expression=""
 
-buttons=[
-    ("7",1,0),("8",1,1),("9",1,2),("/",1,3),
-    ("4",2,0),("5",2,1),("6",2,2),("*",2,3),
-    ("3",3,0),("2",3,1),("1",3,2),("+",3,3),
-    (".",4,0),("0",4,1),("-",4,2),("=",4,3),
-]
+# buttons=[
+#     ("7",1,0),("8",1,1),("9",1,2),("/",1,3),
+#     ("4",2,0),("5",2,1),("6",2,2),("*",2,3),
+#     ("3",3,0),("2",3,1),("1",3,2),("+",3,3),
+#     (".",4,0),("0",4,1),("-",4,2),("=",4,3),
+# ]
 
-for (text,row,col) in buttons:
-    if text== "=":
-        action=calculate
-    else:
-        action=lambda x=text:button_click(x)
-    tk.Button(root,text=text,font=("Arial",20),command=action).grid(row=row,column=col,padx=0,pady=0,sticky="nsew")
+# for (text,row,col) in buttons:
+#     if text== "=":
+#         action=calculate
+#     else:
+#         action=lambda x=text:button_click(x)
+#     tk.Button(root,text=text,font=("Arial",20),command=action).grid(row=row,column=col,padx=0,pady=0,sticky="nsew")
 
-tk.Button(root,text="C",font=("Arial",20),command=clear).grid(row=5,column=1,padx=0,pady=0,sticky="nsew")
-tk.Button(root,text="DEL",font=("Arial",20),command=delete).grid(row=5,column=2,padx=0,pady=0,sticky="nsew")
+# tk.Button(root,text="C",font=("Arial",20),command=clear).grid(row=5,column=1,padx=0,pady=0,sticky="nsew")
+# tk.Button(root,text="DEL",font=("Arial",20),command=delete).grid(row=5,column=2,padx=0,pady=0,sticky="nsew")
 
-root.mainloop()
+# root.mainloop()
+
+# import tkinter as tk
+# from tkinter import ttk
+
+
+# def return_pressed(event):
+#     print('Return key pressed.')
+
+
+# root = tk.Tk()
+
+# btn = ttk.Button(root, text='Save')
+# btn.bind('<Return>', return_pressed)
+
+
+# btn.focus()
+# btn.pack(expand=True)
+
+# root.mainloop()
