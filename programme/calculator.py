@@ -67,4 +67,60 @@
 
 
 
-        
+import tkinter as tk
+
+root=tk.Tk()
+root.title("Calculator")
+root.geometry("400x400")
+root.resizable(True,True)
+
+calculation=""
+Entry_text=tk.StringVar()
+
+entry=tk.Entry(root,textvariable=Entry_text,font=('Arial',20),width=32)
+entry.grid(row=0,column=0,columnspan=5,padx=10,pady=50)
+
+def add_calculation(char):
+    global calculation
+    calculation+=str(char)
+    Entry_text.set(calculation)
+
+def clear():
+    global calculation
+    calculation=""
+    Entry_text.set("")
+
+def delete():
+    global calculation
+    calculation=calculation[:-1]
+
+def evaluate():
+    global calculation
+    try:
+        result=str(eval(calculation))
+        Entry_text.set(result)
+        calculation=result
+    except Exception as e:
+        Entry_text.set=("Error")
+        calculation=""
+
+buttons=[
+    ("7",1,0),("8",1,1),("9",1,2),("/",1,3),
+    ("4",2,0),("5",2,1),("6",2,2),("*",2,3),
+    ("3",3,0),("2",3,1),("1",3,2),("+",3,3),
+    (".",4,0),("0",4,1),("-",4,2),("=",4,3),
+]
+for (text,row,col) in buttons:
+    if text=="=":
+        action=evaluate
+    else:
+        action=lambda x=text: add_calculation(x)
+    tk.Button(root,text=text,font=("Arial",18),command=action).grid(row=row,column=col,padx=0,pady=0,sticky="nsew")
+    
+tk.Button(root,text="C",font=("Arial",18),command=clear).grid(row=5,column=1,padx=0,pady=0,sticky="nsew")
+tk.Button(root,text="del",font=("Arial",18),command=delete).grid(row=5,column=2,padx=0,pady=0,sticky="nsew")
+
+
+
+root.mainloop()
+
